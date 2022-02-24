@@ -5,6 +5,7 @@
 **Dallas:**
 
 <img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/dallas.png?raw=true">
+
 ```
 dallas: 
   - pin: GPIO12
