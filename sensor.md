@@ -16,6 +16,30 @@ sensor:
     unit_of_measurement: "°C" 
 ```
 
+[**TEMPERATURE/HUMIDITY - DHT**](https://esphome.io/components/sensor/dht.html)
+
+DHT sensor do not have good measurement accuracy!
+
+Supported device: DHT11, DHT22, AM2302, RHT03, SI7021 
+
+<img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/sensors/DHT.png?raw=true">
+
+```
+sensor:
+  - platform: dht
+    pin: GPIO2
+    temperature:
+      name: "test_DHT_temperature"
+      filters:
+        - calibrate_linear:
+            # Map 0.0 (from sensor) to 0.0 (true value)
+            - 6.5 -> 0.0
+            - 19.5 -> 13
+    humidity:
+      name: "test_DHT_humidity"
+    update_interval: 60s
+```
+
 [**POWER SENSOR - PZEM-004T AC 100A**](https://esphome.io/components/sensor/pzemac.html)
 
 ESP8266 has only one uart and it uses a logger.
@@ -108,7 +132,7 @@ sensor:
 
 
 
-[**ADC**](https://esphome.io/components/sensor/adc.html)
+[**ADC VOLTAGE METER**](https://esphome.io/components/sensor/adc.html)
 
 ```
 sensor:
