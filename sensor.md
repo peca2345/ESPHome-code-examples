@@ -130,8 +130,6 @@ sensor:
       return id(fan_pwm).speed; #get value from fan_pwm
 ```
 
-
-
 [**ADC VOLTAGE METER**](https://esphome.io/components/sensor/adc.html)
 
 ```
@@ -156,3 +154,32 @@ sensor:
             - 11.55902 -> 11.5
 ```   
 
+[**PULSE METER**](https://esphome.io/components/sensor/pulse_meter.html)
+
+This configuration was used to measure pulses from the reed contact of the water flow meter.
+
+```
+sensor:
+  - platform: pulse_meter
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+    unit_of_measurement: 'pulse'
+    name: 'test_water_pulse_meter'
+    icon: 'mdi:water'
+    internal_filter: 100ms
+    filters:
+      - multiply: 0.5
+    total:
+      name: 'test_water_total'
+      icon: 'mdi:water'
+      unit_of_measurement: 'l'
+      id: total
+      filters:
+      - multiply: 0.5
+
+  - platform: total_daily_energy
+    name: "test_water_total_daily"
+    power_id: total  
+    unit_of_measurement: l
+```   
