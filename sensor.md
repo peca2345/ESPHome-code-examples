@@ -21,7 +21,7 @@ sensor:
 
 ## WATTMETER
 
-**PZEM-004T AC 100A**
+[**PZEM-004T AC 100A**](https://esphome.io/components/sensor/pzemac.html)
 
 ESP8266 has only one uart and it uses a logger.
 If you want to use uart for pzem, disable the logger.
