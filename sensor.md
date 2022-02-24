@@ -158,7 +158,7 @@ sensor:
 
 This configuration was used to measure pulses from the reed contact of the water flow meter.
 
-TUTORIAL: [github](https://esphome.io/components/sensor/pulse_meter.html)
+TUTORIAL: [HERE](https://github.com/peca2345/ESPHome-water-pulse-meter)
 
 ```
 sensor:
