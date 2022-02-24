@@ -2,9 +2,9 @@
 
 ## Temperature
 
-**Dallas DS18B20:**
+[**Dallas DS18B20**](https://esphome.io/components/sensor/dallas.html)
 
-<img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/sensors/dallas.png?raw=true">
+<img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/sensors/DA18B20.png?raw=true">
 
 ```
 dallas: 
