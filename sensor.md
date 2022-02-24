@@ -9,7 +9,7 @@
 ```
 dallas: 
   - pin: GPIO12 # You can use any input pin
-    update_interval: 5s
+    update_interval: 60s
 sensor:    
   - platform: dallas 
     name: "test_dallas"
@@ -32,15 +32,13 @@ If you want to use uart for pzem, disable the logger.
 logger:
   level: NONE
   hardware_uart: UART1
-
 uart: # 
   rx_pin: GPIO3
   tx_pin: GPIO1
   baud_rate: 9600
-  
 sensor:
   - platform: pzemac # PZEM-004T uart
-    update_interval: 10s
+    update_interval: 60s
     current:
       name: "test_current"
     voltage:
