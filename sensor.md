@@ -8,7 +8,7 @@
 
 ```
 dallas: 
-  - pin: GPIO12
+  - pin: GPIO12 # You can use any input pin
     update_interval: 5s
 sensor:    
   - platform: dallas 
