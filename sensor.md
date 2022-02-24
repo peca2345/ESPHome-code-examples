@@ -2,7 +2,7 @@
 
 ## Temperature
 
-**Dallas temp. sensor:**
+**Dallas:**
 ```
 dallas: 
   - pin: GPIO12
@@ -14,3 +14,4 @@ sensor:
     id: test_dallas
     unit_of_measurement: "°C" 
 ```
+<img align="right" src="doc/subpagelist.png">
