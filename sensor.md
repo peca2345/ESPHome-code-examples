@@ -47,14 +47,36 @@ sensor:
       name: "test_frequency"
     power_factor:
       name: "test_power_factor"
-  
+```
+
+[**TIMEUP**](https://esphome.io/components/sensor/uptime.html)
+
+```
+sensor:  
+  - platform: uptime
+    id: uptime
+    name: "test_uptime"
+    update_interval: 60s
+    filters:
+      - lambda: return x / 3600;
+    unit_of_measurement: "h"
+```
+
+[**WIFI SIGNAL**](https://esphome.io/components/sensor/wifi_signal.html)
+
+```
+sensor:  
+  - platform: wifi_signal #sensor
+    name: "test_wifi_signal"
+    update_interval: 60s     
 ```
 
 [**TEMPLATE**](https://esphome.io/components/sensor/template.html)
 
 ```
-  - platform: template #sensor
-    id: "test_fan_speed"
+sensor:  
+  - platform: template 
+    id: "fan_speed"
     name: test_fan_speed
     update_interval: 1s
     accuracy_decimals: 0
