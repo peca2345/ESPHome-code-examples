@@ -16,7 +16,7 @@ sensor:
     unit_of_measurement: "°C" 
 ```
 
-[**WATTMETER - PZEM-004T AC 100A**](https://esphome.io/components/sensor/pzemac.html)
+[**POWER SENSOR - PZEM-004T AC 100A**](https://esphome.io/components/sensor/pzemac.html)
 
 ESP8266 has only one uart and it uses a logger.
 If you want to use uart for pzem, disable the logger.
@@ -48,6 +48,28 @@ sensor:
     power_factor:
       name: "test_power_factor"
 ```
+
+[**POWER SENSOR - CSE7766**](https://esphome.io/components/sensor/cse7766.html)
+
+```
+sensor:
+  - platform: cse7766
+    current:
+      name: "test_current"
+    voltage:
+      name: "test_voltage"
+    power:
+      name: "test_power"
+      id: power
+
+  - platform: total_daily_energy
+    name: "test_daily_energy"
+    power_id: power 
+    filters:
+      - multiply: 0.001
+    unit_of_measurement: kWh
+    accuracy_decimals: 1 
+```   
 
 [**TIMEUP**](https://esphome.io/components/sensor/uptime.html)
 
@@ -109,3 +131,4 @@ sensor:
             - 11.05371 -> 11
             - 11.55902 -> 11.5
 ```   
+
