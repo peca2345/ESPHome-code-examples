@@ -2,7 +2,7 @@
 
 ## Temperature
 
-**Dallas:**
+**Dallas DS18B20:**
 
 <img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/sensors/dallas.png?raw=true">
 
@@ -21,7 +21,7 @@ sensor:
 
 ## WATTMETER
 
-**PZEM-004T 100A**
+**PZEM-004T AC 100A**
 
 ESP8266 has only one uart and it uses a logger.
 If you want to use uart for pzem, disable the logger.
