@@ -3,6 +3,7 @@
 ## Temperature
 
 **Dallas:**
+<img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/dallas.png?raw=true">
 ```
 dallas: 
   - pin: GPIO12
@@ -14,4 +15,4 @@ sensor:
     id: test_dallas
     unit_of_measurement: "°C" 
 ```
-<img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/dallas.png?raw=true">
+
