@@ -1,8 +1,6 @@
 # Sensors
 
-## Temperature
-
-[**Dallas DS18B20**](https://esphome.io/components/sensor/dallas.html)
+[**TEMPERATURE - Dallas DS18B20**](https://esphome.io/components/sensor/dallas.html)
 
 <img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/sensors/DA18B20.png?raw=true">
 
@@ -18,10 +16,7 @@ sensor:
     unit_of_measurement: "°C" 
 ```
 
-
-## WATTMETER
-
-[**PZEM-004T AC 100A**](https://esphome.io/components/sensor/pzemac.html)
+[**WATTMETER - PZEM-004T AC 100A**](https://esphome.io/components/sensor/pzemac.html)
 
 ESP8266 has only one uart and it uses a logger.
 If you want to use uart for pzem, disable the logger.
@@ -55,15 +50,14 @@ sensor:
   
 ```
 
-[**UPTIME**](https://esphome.io/components/sensor/uptime.html)
+[**TEMPLATE**](https://esphome.io/components/sensor/template.html)
 
 ```
-sensor:
-  - platform: uptime #sensor
-    id: test_uptime
-    name: "test_uptime"
-    update_interval: 60s
-    filters:
-      - lambda: return x / 3600;
-    unit_of_measurement: "h"
+  - platform: template #sensor
+    id: "fan_speed"
+    name: iudirna_fan_speed
+    update_interval: 1s
+    accuracy_decimals: 0
+    lambda: |-
+      return id(fan_pwm).speed; #get value from fan_pwm
 ```
