@@ -54,8 +54,8 @@ sensor:
 
 ```
   - platform: template #sensor
-    id: "fan_speed"
-    name: iudirna_fan_speed
+    id: "test_fan_speed"
+    name: test_fan_speed
     update_interval: 1s
     accuracy_decimals: 0
     lambda: |-
