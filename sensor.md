@@ -83,3 +83,29 @@ sensor:
     lambda: |-
       return id(fan_pwm).speed; #get value from fan_pwm
 ```
+
+
+
+[**ADC**](https://esphome.io/components/sensor/adc.html)
+
+```
+sensor:
+  - platform: adc
+    pin: A0 # 0-3.3V
+    name: "test_car_voltage"
+    id: adc_voltage
+    update_interval: 1s
+    filters:
+      - multiply: 64.68 #
+      - median:
+          window_size: 10
+          send_every: 5
+          send_first_at: 1
+      - calibrate_polynomial:
+          degree: 2
+          datapoints:
+            - 10.04309 -> 10
+            - 10.61156 -> 10.50
+            - 11.05371 -> 11
+            - 11.55902 -> 11.5
+```   
