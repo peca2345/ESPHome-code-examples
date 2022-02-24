@@ -55,7 +55,7 @@ sensor:
   
 ```
 
-[**Dallas DS18B20**](https://esphome.io/components/sensor/uptime.html)
+[**UPTIME**](https://esphome.io/components/sensor/uptime.html)
 
 ```
 sensor:
