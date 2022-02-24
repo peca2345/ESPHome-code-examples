@@ -1,5 +1,5 @@
 # ESPHome-code-examples
 
-# Sensors
-# Binary_sensor
-# Switch
+## Sensors
+## Binary_sensor
+## Switch
