@@ -14,4 +14,4 @@ sensor:
     id: test_dallas
     unit_of_measurement: "°C" 
 ```
-<img align="right" src="doc/subpagelist.png">
+<img align="right" src="https://github.com/peca2345/ESPHome-code-examples/blob/main/images/dallas.png?raw=true">
