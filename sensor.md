@@ -54,3 +54,16 @@ sensor:
       name: "test_power_factor"
   
 ```
+
+[**Dallas DS18B20**](https://esphome.io/components/sensor/uptime.html)
+
+```
+sensor:
+  - platform: uptime #sensor
+    id: test_uptime
+    name: "test_uptime"
+    update_interval: 60s
+    filters:
+      - lambda: return x / 3600;
+    unit_of_measurement: "h"
+```
