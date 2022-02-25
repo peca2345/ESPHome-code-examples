@@ -185,3 +185,16 @@ sensor:
     power_id: total  
     unit_of_measurement: l
 ```   
+
+[**WEB SERVER**](https://esphome.io/components/web_server.html)
+
+```   
+web_server:
+  port: 80
+ #  auth:
+ #    username: admin
+ #    password: !secret web_server_password
+
+```  
+ 
+ 
